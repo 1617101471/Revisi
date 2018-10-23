@@ -19,6 +19,8 @@
 					  <th>Harga</th>
 					  <th>Gambar Produk</th>
 					  <th>Deskkripsi</th>
+					  <th>Shopee</th>
+					  <th>Bukalapak</th>
 					  <th colspan="3">Action</th>
 			  		</tr>
 				  	</thead>
@@ -31,6 +33,8 @@
 				    	<td>Rp. {{ $data->harga }}</td>
 				    	<td><img src="{{ asset('assets/img/gambar/' .$data->gambar)}}" style="max-height: 125px; max-width: 125px; margin-top: 7px;"></td>
 				    	<td>{!! $data->content !!}</td>
+				    	<td>{{ $data->linkshopee }}</td>
+				    	<td>{{ $data->linkbukalapak }}</td>
 						<td>
 							<a class="btn btn-warning" href="{{ route('produk.edit',$data->id) }}">Edit</a>
 						</td>
@@ -48,6 +52,7 @@
 				      @endforeach	
 				  	</tbody>
 				  </table>
+				  {{ $produks->links() }}
 				</div>
 			  </div>
 			</div>	

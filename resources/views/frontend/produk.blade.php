@@ -14,17 +14,25 @@
            <div class="choose-our-chips-content-area text-center wow fadeInUp">
                 <div class="row">
                   @foreach($produks as $data)
-                    <div class="col-sm-6 col-md-3 single-chips-item">
+                    <div class="col-sm-6 col-md-3 single-chips-item">                 
+                      <div class="junika">
                       <img src="{{asset('assets/img/gambar/' .$data->gambar)}}" alt="">
+                      </div>
                        <h3>{{$data->nama_produk}}</h3>
                        <div class="pricing"><span>Harga:</span>Rp. {{$data->harga}}</div>
                         <p>{!! $data->content !!}</p>
-                        <a href="https://shopee.co.id/ieanx14">
-                          <img src="/assets/img/logoShopee1.png" style="max-width: 100px; transform: scale(1.1); -moz-transform: scale(1.1); -webkit-transform: scale(1.1);">
-                        </a>
-                        <a href="https://www.bukalapak.com/p/food/cemilan-snack/kn9x6u-jual-kripcok?from=&product_owner=normal_seller">
-                          <img src="/assets/img/logoBL1.png" style="max-width: 83px; transform: scale(1.1);">
-                        </a>
+                        <h3>Order Now in : </h3>
+                        <!-- <a class="btn chipsofic-small-btn" data-scroll href="{{route('produk')}}">Order Now</a> -->
+                    <div class="perbesar">
+                    <a href="{{$data->linkshopee }}" target="_blank">
+                      <img src="/assets/img/logoShopee1.png" style="max-width: 65px;">
+                    </a> <P>Order In Shopee</P>
+                  </div>
+                  <div class="bl">
+                    <a href="{{ $data->linkbukalapak }}" target="_blank">
+                      <img src="/assets/img/logoBL1.png" style="max-width: 56px;">
+                    </a><P>Order In Bukalapak</P>
+                  </div>
                     </div>
                     @endforeach
                 </div>

@@ -18,47 +18,47 @@
 
     <!-- Favicon
     ============================================ -->
-    <link rel="shortcut icon" type="image/png" href="assets/img/logokripcok.png">
+    <link rel="shortcut icon" type="image/png" href="{{ asset ('assets/img/logokripcok.png')}}">
    
     <!-- Bootstrap CSS
     ============================================ -->
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ asset ('assets/css/bootstrap.min.css')}}">
     
     <!-- Font Awesome CSS
     ============================================ -->
-    <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+    <link rel="stylesheet" href="{{ asset ('assets/css/font-awesome.min.css')}}">
     
     <!-- Animate CSS
     ============================================ -->
-    <link rel="stylesheet" href="assets/css/animate.min.css">
+    <link rel="stylesheet" href="{{ asset ('assets/css/animate.min.css')}}">
     
     <!-- OwlCarousel CSS
     ============================================ -->
-    <link rel="stylesheet" href="assets/css/owl.carousel.css">
+    <link rel="stylesheet" href="{{ asset ('assets/css/owl.carousel.css')}}">
     
     <!-- Magnific Popup CSS
     ============================================ -->
-    <link rel="stylesheet" href="assets/css/magnific-popup.css">
+    <link rel="stylesheet" href="{{ asset ('assets/css/magnific-popup.css')}}">
     
     <!-- Slicknav CSS
     ============================================ -->
-    <link rel="stylesheet" href="assets/css/slicknav.min.css">
+    <link rel="stylesheet" href="{{ asset ('assets/css/slicknav.min.css')}}">
     
     <!-- Animated Header CSS
     ============================================ -->
-    <link rel="stylesheet" href="assets/css/animated-header.css">
+    <link rel="stylesheet" href="{{ asset ('assets/css/animated-header.css')}}">
     
     <!-- Main CSS
     ============================================ -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="{{asset('style.css')}}">
     
     <!-- Responsive CSS
     ============================================ -->
-    <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="stylesheet" href="{{ asset ('assets/css/responsive.css')}}">
     
     <!-- jQuery
     ============================================ -->
-    <script src="assets/js/jquery-2.2.4.min.js"></script>
+    <script src="{{ asset ('assets/js/jquery-2.2.4.min.js')}}"></script>
 </head>
 <body>
     
@@ -80,45 +80,47 @@
     
     <!-- Bootstrap JS
     ============================================ -->
-    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="{{ asset ('assets/js/bootstrap.min.js')}}"></script>
     
     <!-- Magnific Popup JS
     ============================================ -->
-    <script src="assets/js/jquery.magnific-popup.min.js"></script>
+    <script src="{{ asset ('assets/js/jquery.magnific-popup.min.js')}}"></script>
     
     <!-- OwlCarousel JS
     ============================================ -->
-    <script src="assets/js/owl.carousel.min.js"></script>
+    <script src="{{ asset ('assets/js/owl.carousel.min.js')}}"></script>
     
     <!-- SlickNav JS
     ============================================ -->
-    <script src="assets/js/jquery.slicknav.min.js"></script>
+    <script src="{{ asset ('assets/js/jquery.slicknav.min.js')}}"></script>
     
      <!-- SmoothScroll JS
     ============================================ -->
-    <script src="assets/js/smooth-scroll.min.js"></script>
+    <script src="{{ asset ('assets/js/smooth-scroll.min.js')}}"></script>
     
     <!-- WOW JS
     ============================================ -->
-    <script src="assets/js/wow-1.3.0.min.js"></script>
+    <script src="{{ asset ('assets/js/wow-1.3.0.min.js')}}"></script>
     
     <!-- Modal JS
     ============================================ -->
-    <script src="assets/js/modal.js"></script>
+    <script src="{{ asset ('assets/js/modal.js')}}"></script>
     
     <!-- Counter JS
     ============================================ -->
-    <script src="assets/js/waypoints.min.js"></script>
-    <script src="assets/js/jquery.counterup.min.js"></script>
+    <script src="{{ asset ('assets/js/waypoints.min.js')}}"></script>
+    <script src="{{ asset ('assets/js/jquery.counterup.min.js')}}"></script>
     
     <!-- Animated Header JS
     ============================================ -->
-    <script src="assets/js/classie.js"></script>
-    <script src="assets/js/cbpAnimatedHeader.min.js"></script>
+    <script src="{{ asset ('assets/js/classie.js')}}"></script>
+    <script src="{{ asset ('assets/js/cbpAnimatedHeader.min.js')}}"></script>
     
     <!-- Main JS
     ============================================ -->
-    <script src="assets/js/active.js"></script>
+    <script src="{{ asset ('assets/js/active.js')}}"></script>
+
+    <!-- hover shopee dan bukalapak -->
 
 </body>
 

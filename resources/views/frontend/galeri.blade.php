@@ -5,8 +5,8 @@
               <div class="row">
                  <div class="col-md-12">
                        <div class="section-title text-center">
-                            <h1>Picture Gallery</h1>
-                            <div class="chipsofic-subtitle">Check our aweomse product images</div>
+                            <h1>Galeri</h1>
+                            <div class="chipsofic-subtitle">Periksa gambar produk kami yang luar biasa</div>
                        </div>
                    </div>
                 </div>
@@ -17,7 +17,7 @@
                     <!-- Gallery 1st Row Start -->
                     @foreach($galeris as $data)
                     <div class="col-sm-6 col-md-3">
-                        <a title="Lorem Ipsum 01" class="gallery-lightbox" href="{{asset('assets/img/gambar/' .$data->gambar)}}">
+                        <a title="{!! $data->content !!}" class="gallery-lightbox" href="{{asset('assets/img/gambar/' .$data->gambar)}}" style="width: 383px; height: 380px;">
                             <i class="fa fa-plus">
                             </i> <img src="{{asset('assets/img/gambar/' .$data->gambar)}}" alt=""></a>
                     </div>

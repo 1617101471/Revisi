@@ -10,7 +10,7 @@
                 @endphp
                 @foreach($artikels as $data)
                     <div class="col-md-6">
-                        <h1><span>We are</span> Kripcok</h1>
+                        <h1><span>Cemilan</span> Kripcok</h1>
                         <h2>{{$data->judul}}</h2>
                         <p>{!! $data->content !!}</p>
                         <div class="row">
@@ -53,8 +53,8 @@
           <div class="row">
              <div class="col-md-12">
                    <div class="section-title text-center">
-                        <h1>Choose Your Flavor</h1>
-                        <div class="chipsofic-subtitle">Choose any of our chips which better suits your needs</div>
+                        <h1>Produk Kripcok</h1>
+                        <div class="chipsofic-subtitle">Pilihlah rasa yang kalian inginkan</div>
                    </div>
                </div>
             </div>
@@ -67,7 +67,7 @@
                        <h3>{{$data->nama_produk}}</h3>
                        <div class="pricing"><span>Harga:</span>Rp. {{$data->harga}}</div>
                         <p>{!! $data->content !!}</p>
-                        <a class="btn chipsofic-small-btn" data-scroll href="{{route('produk')}}">Order Now</a>
+                        <a class="btn chipsofic-small-btn" data-scroll href="{{route('produk')}}">Beli Sekarang</a>
                     </div>
                     @endforeach
                 </div>
@@ -91,8 +91,8 @@
               <div class="row">
                  <div class="col-md-12">
                        <div class="section-title text-center">
-                            <h1>Picture Gallery</h1>
-                            <div class="chipsofic-subtitle">Check our aweomse product images</div>
+                            <h1>Galeri</h1>
+                            <div class="chipsofic-subtitle">Periksa gambar produk kami yang luar biasa</div>
                        </div>
                    </div>
                 </div>
@@ -102,7 +102,7 @@
                 <div class="row wow fadeInUp">
                     @foreach($galeris as $data)
                     <div class="col-sm-6 col-md-3">
-                        <a title="Lorem Ipsum 01" class="gallery-lightbox" href="{{ asset('assets/img/gambar/' .$data->gambar)}}"><i class="fa fa-plus"></i> <img src="{{ asset('assets/img/gambar/' .$data->gambar)}}" alt=""></a>
+                        <a title="{{ $data->content }}" class="gallery-lightbox" href="{{ asset('assets/img/gambar/' .$data->gambar)}}" style="width: 383px; height: 380px;"><i class="fa fa-plus"></i> <img src="{{ asset('assets/img/gambar/' .$data->gambar)}}" alt=""></a>
                     </div>
                     @endforeach
                 </div>
@@ -115,34 +115,13 @@
     <div scroll-spy="true" class="chipsofic-content-block counter-block">
         <div class="container">
            <div class="row">
-             <div class="col-md-12">
-                   <div class="section-title text-center">
-                        <h1>Our Progress</h1>
-                        <div class="chipsofic-subtitle">Check our progress over the years</div>
+                <div class="col-md-12">
+                   <div class="section-title text-right">
+                        <h1>Kemajuan kita</h1>
+                        <div class="chipsofic-subtitle">periksa kemajuan kami selama ini</div>
                    </div>
                </div>
             </div>
-            
-           <div class="chipsofic-counter-area text-center">
-                <div class="row">
-                    <div class="col-sm-6 col-md-3">
-                       <h2><span class="counter">37,020</span></h2>
-                        <p>Yearly Customer</p>
-                    </div>
-                    <div class="col-sm-6 col-md-3">
-                       <h2><span class="counter">5,01,212</span></h2>
-                        <p>Sell Per Year</p>
-                    </div>
-                    <div class="col-sm-6 col-md-3">
-                       <h2><span class="counter">9,210</span></h2>
-                        <p>Staff</p>
-                    </div>
-                    <div class="col-sm-6 col-md-3">
-                       <h2><span class="counter">5,001</span></h2>
-                        <p>Showroom</p>
-                    </div>
-                </div>
-            </div>  
         </div>
     </div>
     <!-- Our Progress Area End -->
@@ -225,8 +204,8 @@
            <div class="row">
              <div class="col-md-12">
                    <div class="section-title text-center">
-                        <h1>Our Happy Customers</h1>
-                        <div class="chipsofic-subtitle">Discover what our Customers have to say</div>
+                        <h1 style="text-shadow: blue 1px 0 10px;">Testimoni Kripcok</h1>
+                        <div class="chipsofic-subtitle" style="text-shadow: blue 5px 0 10px; font-weight: bold;">Silahkan coba dan rasakan sendiri sensasinya</div>
                    </div>
                </div>
             </div>
@@ -236,6 +215,7 @@
                     <div class="testimonial-slide-item-tablecell"> 
                         <div class="row">
                             <div class="col-md-12 text-center">
+                                <div class="circle-testimonial-item">
                                 <img src="{{ asset('assets/img/gambar/' .$data->gambar)}}" alt="">
                                 <p>{!! $data->content !!}</p>
                                     <ul class="review-stars">
@@ -246,6 +226,7 @@
                                         <li><i class="fa fa-star"></i></li>
                                     </ul>
                                 <h4>{{$data->nama}}<span>{{$data->alamat}}</span></h4>
+                            </div>
                             </div>
                         </div>
                     </div>
@@ -265,8 +246,8 @@
            <div class="row">
              <div class="col-md-12">
                    <div class="section-title text-center">
-                        <h1>Our Blog</h1>
-                        <div class="chipsofic-subtitle">Read the latest news about our product</div>
+                        <h1>Blog Kami</h1>
+                        <div class="chipsofic-subtitle">Baca berita terbaru tentang produk kami</div>
                    </div>
                </div>
             </div>
@@ -320,8 +301,8 @@
           <div class="row">
              <div class="col-md-12">
                    <div class="section-title text-center">
-                        <h1>Contact Chipsofic</h1>
-                        <div class="chipsofic-subtitle">Contact us for further query and application</div>
+                        <h1>Kontak Kripcok</h1>
+                        <div class="chipsofic-subtitle">Hubungi kami untuk permintaan dan aplikasi lebih lanjut</div>
                    </div>
                </div>
             </div>
@@ -334,8 +315,8 @@
                             <li><i class="fa fa-envelope"></i> <a href="mailto:text@example.com">{{ $data->email }}</a></li>
                             <li><i class="fa fa-phone"></i> <a href="tel:123-456-789"> 0{{ $data->nohp }}</a></li>
                             <li><i class="fa fa-map-marker"></i> {{ $data->alamat }} </li>
-                            <li><i class="fa fa-linkedin-square"></i><a href="http://linkedin.com/">{{ $data->instagram }}</a></li>
-                            <li><i class="fa fa-facebook-square"></i><a href="http://facebook.com/">{{ $data->facebook }}</a></li>
+                            <li><i class="fa fa-linkedin-square"></i><a href="https://www.instagram.com/kripcok_id/">{{ $data->instagram }}</a></li>
+                            <li><i class="fa fa-facebook-square"></i><a href="https://web.facebook.com/kripcok.id">{{ $data->facebook }}</a></li>
                         </ul>
                     </div>
                </div>

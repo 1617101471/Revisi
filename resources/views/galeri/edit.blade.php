@@ -24,15 +24,15 @@
 			  			<input type="file" name="gambar" value="{{ $galeris->gambar }}">
                     </div>
 
-			  		<!-- <div class="form-group {{ $errors->has('harga') ? ' has-error' : '' }}">
-			  			<label class="control-label">harga</label>	
-			  			<input type="number" name="harga" class="form-control" value="{{ $galeris->harga }}"  required>
-			  			@if ($errors->has('harga'))
+			  		<div class="form-group {{ $errors->has('content') ? ' has-error' : '' }}">
+			  			<label class="control-label">Deskripsi</label>	
+			  			<textarea id="text" type="ckeditor" name="content" class="ckeditor" required>{{ $galeris->content }}</textarea>
+			  			@if ($errors->has('content'))
                             <span class="help-block">
-                                <strong>{{ $errors->first('harga') }}</strong>
+                                <strong>{{ $errors->first('content') }}</strong>
                             </span>
                         @endif
-			  		</div> -->
+			  		</div>
 			  		<div class="form-group">
 			  			<button type="submit" class="btn btn-outline-primary">Edit</button>
 			  		</div>
@@ -41,5 +41,6 @@
 			</div>	
 		</div>
 	</div>
+	<script type="text/javascript" src="{{asset ('ckeditor/ckeditor.js')}}"></script>
 </div>
 @endsection

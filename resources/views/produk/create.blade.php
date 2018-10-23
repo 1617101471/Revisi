@@ -35,6 +35,26 @@
                         @endif
 			  		</div>	
 
+			  		<div class="form-group {{ $errors->has('linkshopee') ? ' has-error' : '' }}">
+			  			<label class="control-label">Shopee</label>	
+			  			<input type="text" name="linkshopee" class="form-control"  required>
+			  			@if ($errors->has('linkshopee'))
+                            <span class="help-block">
+                                <strong>{{ $errors->first('linkshopee') }}</strong>
+                            </span>
+                        @endif
+			  		</div>
+
+			  		<div class="form-group {{ $errors->has('linkbukalapak') ? ' has-error' : '' }}">
+			  			<label class="control-label">Bukalapak</label>	
+			  			<input type="text" name="linkbukalapak" class="form-control"  required>
+			  			@if ($errors->has('linkbukalapak'))
+                            <span class="help-block">
+                                <strong>{{ $errors->first('linkbukalapak') }}</strong>
+                            </span>
+                        @endif
+			  		</div>
+
 			  		<div class="form-group {{ $errors->has('content') ? ' has-error' : '' }}">
 			  			<label class="control-label">Content</label>	
 			  			<textarea id="text" type="ckeditor" name="content" class="ckeditor"  required></textarea>

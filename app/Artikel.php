@@ -13,4 +13,8 @@ class artikel extends Model
     public function user(){
     	return $this->belongsTo('App\User','id_user');
     }
+
+    public function getRouteKeyName(){
+    	return 'slug';
+    }
 }

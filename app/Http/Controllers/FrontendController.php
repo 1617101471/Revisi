@@ -33,10 +33,16 @@ class FrontendController extends Controller
     }
 
     public function artikel(){
-        $artikels = Artikel::all();
+        $artikels = Artikel::paginate(3);
         return view('frontend.artikel', compact('artikels'));
     }
 
+    public function single(Artikel $artikel){
+        $previous = Artikel::where('id', '<', $artikel->id)->orderBy('id', 'desc')->first();
+        $next = Artikel::where('id', '>', $artikel->id)->orderBy('id')->first();
+
+        return view('frontend.single', compact('artikel','previous','next'));
+    }
     public function testimoni(){
         $testimonis = Testimoni::all();
         return view('frontend.testimoni', compact('testimonis'));

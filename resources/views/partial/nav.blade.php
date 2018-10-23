@@ -5,7 +5,7 @@
                     <div class="col-md-3">
                         <div class="logo">
                             <a href="#top">
-                                <h1><img src="assets/img/logo.png" alt="chipsofic"></h1>
+                                <h1><img src="{{asset('/assets/img/logo.png')}}" alt="chipsofic"></h1>
                             </a>
                         </div>
                     </div>
@@ -13,12 +13,12 @@
                         <div class="main-menu">
                             <ul id="navigation">
                                 <li><a data-scroll href="{{route('beranda')}}">HOME</a></li>
-                                <li><a data-scroll href="{{route('produk')}}">PRODUCTS</a></li>
-                                <li><a data-scroll href="{{route('galeri')}}">GALLERY</a></li>
-                                <li><a data-scroll href="#our-team">TEAM</a></li>
-                                <li><a data-scroll href="{{route('testimoni')}}">TESTIMONIALS</a></li>
+                                <li><a data-scroll href="{{route('produk')}}">PRODUK</a></li>
+                                <li><a data-scroll href="{{route('galeri')}}">GALERI</a></li>
+                                <!-- <li><a data-scroll href="#our-team">TEAM</a></li> -->
+                                <li><a data-scroll href="{{route('testimoni')}}">TESTIMONI</a></li>
                                 <li><a data-scroll href="{{route('artikel')}}">ARTIKEL</a></li>
-                                <li><a data-scroll href="{{route('kontak')}}">CONTACT</a></li>
+                                <li><a data-scroll href="{{route('kontak')}}">KONTAK</a></li>
                             </ul>
                         </div>
                     </div>
@@ -33,9 +33,8 @@
         <div class="container">
             <div class="row">
                 <div class="top-area text-center">
-                    <h1>Chipsofic: Leader of Potato Chips</h1>
-                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
-                    <a data-scroll href="#about-us" class="btn">Learn More</a>
+                    <h1 style="text-shadow: #000 1px 0 10px;">Kripcok : Rajanya keripik manis</h1>
+                    <p style="text-shadow: #000 1px 0 10px;">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
                 </div>
             </div>
         </div>

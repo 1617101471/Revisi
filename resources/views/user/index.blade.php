@@ -4,7 +4,7 @@
 	<div class="container">
 		<div class="col-12"><br>
 			<div class="panel panel-primary">
-			  <div class="panel-heading"><h4> User</h4>
+			  <div class="panel-heading">User
 			  	<div class="panel-title pull-right">
 			  		<a href="{{ route('user.create') }}">Tambah Data</a>
 			  	</div>
@@ -44,6 +44,7 @@
 				      @endforeach	
 				  	</tbody>
 				  </table>
+				  {{ $users->links() }}
 				</div>
 			  </div>
 			</div>	

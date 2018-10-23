@@ -15,7 +15,7 @@ class ProduksController extends Controller
      */
     public function index()
     {
-        $produks = Produk::all();
+        $produks = Produk::paginate(10);
         return view('produk.index', compact('produks'));
     }
 
@@ -41,6 +41,8 @@ class ProduksController extends Controller
             'nama_produk' => 'required|max:255',
             'harga' => 'required|max:255',
             'gambar' => 'required|',
+            'linkshopee' => 'required',
+            'linkbukalapak' => 'required',
             'content' => 'required|max:255'
         ]);
 
@@ -48,6 +50,8 @@ class ProduksController extends Controller
         $produks->nama_produk = $request->nama_produk;
         $produks->harga = $request->harga;
         $produks->content = $request->content;
+        $produks->linkshopee = $request->linkshopee;
+        $produks->linkbukalapak = $request->linkbukalapak;
         $produks->gambar = $request->gambar;
 
         if ($request->hasFile('gambar')){

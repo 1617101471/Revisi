@@ -5,8 +5,8 @@
            <div class="row">
              <div class="col-md-12">
                    <div class="section-title text-center">
-                        <h1>Our Blog</h1>
-                        <div class="chipsofic-subtitle">Read the latest news about our product</div>
+                        <h1>Blog Kami</h1>
+                        <div class="chipsofic-subtitle">Baca berita terbaru tentang produk kami</div>
                    </div>
                </div>
             </div>
@@ -14,7 +14,7 @@
             <div class="row wow fadeInLeft">
               @foreach($artikels as $data)
                 <div class="col-sm-4">
-                    <a data-toggle="modal" data-target="#blog-content{{$data->id}}" class="single-blog-item">
+                    <a href="/artikel/single/{{$data->slug}}" class="single-blog-item">
                         <div class="blog-preview blog-bg-1" style="background-image: url(assets/img/gambar/{{$data->gambar}})"></div>
                         <h3>{{$data->judul}}</h3>
                         <div class="post-meta">
@@ -26,34 +26,10 @@
                         <p>{!! str_limit($data->content,100) !!}</p>
                     </a>
                 </div>
-                @include('frontend.modalartikel')
                 @endforeach
-
             </div>
+            {{ $artikels->links() }}
             <br>
-            <div id="disqus_thread"></div>
-                <div id="disqus_thread"></div>
-<script>
-
-/**
-*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
-/*
-var disqus_config = function () {
-this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
-this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-};
-*/
-(function() { // DON'T EDIT BELOW THIS LINE
-var d = document, s = d.createElement('script');
-s.src = 'https://kripcokcoment.disqus.com/embed.js';
-s.setAttribute('data-timestamp', +new Date());
-(d.head || d.body).appendChild(s);
-})();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-                            
-</div>
 <!--Start of Tawk.to Script-->
 <script type="text/javascript">
 var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();

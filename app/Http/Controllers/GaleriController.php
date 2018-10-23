@@ -16,7 +16,7 @@ class GaleriController extends Controller
      */
     public function index()
     {
-        $galeris = Galeri::all();
+        $galeris = Galeri::paginate(10);
         return view('galeri.index', compact('galeris'));
     }
 
@@ -39,9 +39,11 @@ class GaleriController extends Controller
     public function store(Request $request)
     {
         $this->validate($request, [
-            'gambar' => ''
+            'gambar' => '',
+            'content' => 'required'
         ]);
         $galeris = new Galeri;
+        $galeris->content = $request->content;
         $galeris->gambar = $request->gambar;
 
         if ($request->hasFile('gambar')){
@@ -88,10 +90,12 @@ class GaleriController extends Controller
     public function update(Request $request, $id)
     {
         $this->validate($request, [
-            'gambar' => ''
+            'gambar' => '',
+            'content' => 'required'
         ]);
 
         $galeris = Galeri::findOrFail($id);
+        $galeris->content = $request->content;
 
         if ($request->hasFile('gambar')){
             $file = $request->file('gambar');

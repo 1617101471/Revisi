@@ -16,7 +16,7 @@ class ArtikelController extends Controller
      */
     public function index()
     {
-        $artikels = Artikel::with('user')->get();
+        $artikels = Artikel::with('user')->paginate(10);
         return view('artikel.index', compact('artikels'));
     }
 
@@ -43,12 +43,14 @@ class ArtikelController extends Controller
             'id_user' => 'required|max:255',
             'gambar' => '',
             'judul'=>'required|max:255',
+            'slug' => '',
             'content'=>'required|max:2000'
         ]);
 
         $artikels = new Artikel;
         $artikels->id_user = $request->id_user;
         $artikels->judul = $request->judul;
+        $artikels->slug = str_slug($request->judul, '-');
         $artikels->content = $request->content;
         $artikels->gambar = $request->gambar;
 
@@ -99,6 +101,7 @@ class ArtikelController extends Controller
     {
         $this->validate($request, [
             'judul' => 'required|max:255',
+            'slug' => '',
             'id_user' => 'required',
             'gambar' => '',
             'content' => 'required|max:2000'
@@ -108,6 +111,7 @@ class ArtikelController extends Controller
         $artikels->id_user = $request->id_user;
         $artikels->gambar = $request->gambar;
         $artikels->judul = $request->judul;
+        $artikels->slug = str_slug($request->judul, '-');
         $artikels->content = $request->content;
 
         if ($request->hasFile('gambar')){

@@ -5,8 +5,8 @@
           <div class="row">
              <div class="col-md-12">
                    <div class="section-title text-center">
-                        <h1>Contact Kripcok</h1>
-                        <div class="chipsofic-subtitle">Contact us for further query and application</div>
+                        <h1>Kontak Kripcok</h1>
+                        <div class="chipsofic-subtitle">Hubungi kami untuk permintaan dan aplikasi lebih lanjut</div>
                    </div>
                </div>
             </div>
@@ -16,16 +16,16 @@
                    <div class="contact-info-block">  
                         <p>{!! $data->content !!}</p>
                         <ul>
-                            <li><i class="fa fa-envelope"></i> <a href="mailto:text@example.com">{{ $data->email }}</a></li>
-                            <li><i class="fa fa-phone"></i> <a href="tel:123-456-789"> 0{{ $data->nohp }}</a></li>
+                            <li><i class="fa fa-envelope"></i> <a href="#">{{ $data->email }}</a></li>
+                            <li><i class="fa fa-phone"></i> <a href="tel:123-456-789">0{{ $data->nohp }}</a></li>
                             <li><i class="fa fa-map-marker"></i> {{ $data->alamat }} </li>
-                            <li><i class="fa fa-linkedin-square"></i><a href="http://linkedin.com/">{{ $data->instagram }}</a></li>
-                            <li><i class="fa fa-facebook-square"></i><a href="http://facebook.com/">{{ $data->facebook }}</a></li>
+                            <li><i class="fa fa-linkedin-square"></i><a href="https://www.instagram.com/kripcok_id/">{{ $data->instagram }}</a></li>
+                            <li><i class="fa fa-facebook-square"></i><a href="https://web.facebook.com/kripcok.id">{{ $data->facebook }}</a></li>
                         </ul>
                     </div>
                </div>
                <div class="col-md-6 wow fadeInRight">
-                        <img src="{{ asset('/assets/img/gambar/' .$data->gambar)}}" alt="" style="max-width: 380px;">
+                        <img src="{{ asset('/assets/img/gambar/' .$data->gambar)}}" alt="" style="max-width: 380px; margin-top: 55px;">
                     </div>
                @endforeach
             </div>

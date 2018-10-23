@@ -16,6 +16,7 @@ class CreateGalerisTable extends Migration
         Schema::create('galeris', function (Blueprint $table) {
             $table->increments('id');
             $table->string('gambar');
+            $table->text('content');
             $table->timestamps();
         });
     }

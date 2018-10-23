@@ -5,8 +5,8 @@
            <div class="row">
              <div class="col-md-12">
                    <div class="section-title text-center">
-                        <h1>Our Happy Customers</h1>
-                        <div class="chipsofic-subtitle">Discover what our Customers have to say</div>
+                        <h1 style="text-shadow: blue 1px 0 10px;">Testimoni Kripcok</h1>
+                        <div class="chipsofic-subtitle" style="text-shadow: blue 5px 0 10px; font-weight: bold;">Silahkan coba dan rasakan sendiri sensasinya</div>
                    </div>
                </div>
             </div>
@@ -16,8 +16,9 @@
                     <div class="testimonial-slide-item-tablecell"> 
                         <div class="row">
                             <div class="col-md-12 text-center">
+                                <div class="circle-testimonial-item">
                                 <img src="{{ asset('assets/img/gambar/' .$data->gambar)}}" alt="">
-                                <p>{!! $data->content !!}</p>
+                                <p >{!! $data->content !!}</p>
                                     <ul class="review-stars">
                                         <li><i class="fa fa-star"></i></li>
                                         <li><i class="fa fa-star"></i></li>
@@ -27,6 +28,7 @@
                                     </ul>
                                 <h4>{{$data->nama}}<span>{{$data->alamat}}</span></h4>
                             </div>
+                        </div>
                         </div>
                     </div>
                 </div>

@@ -48,6 +48,7 @@
 				      @endforeach	
 				  	</tbody>
 				  </table>
+				  {{ $testimonis->links() }}
 				</div>
 			  </div>
 			</div>	

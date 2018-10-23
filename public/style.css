@@ -388,12 +388,29 @@ img {
 7. Product Section
 -------------------------------*/
 
-.single-chips-item:hover img {
+/*.single-chips-item:hover img {
+  -moz-transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}*/
+
+.junika:hover img {
   -moz-transform: scale(1.1);
   -webkit-transform: scale(1.1);
   transform: scale(1.1);
 }
 
+.perbesar:hover img {
+    -moz-transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+.bl:hover img {
+    -moz-transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
 .choose-our-chips-content-area {
     margin-top:50px;
 }
@@ -621,8 +638,16 @@ img {
     padding: 0;
 }
 .testimonial-bg-1 {
-    background: url('assets/img/kripcokfoto3.jpg') no-repeat fixed center;
+    background: url('assets/img/backgroundtesti.png') no-repeat fixed center;
     background-size: cover; 
+}
+
+.circle-testimonial-item {
+    background: rgba(0,0,0,.3);
+    font-family: 'Raleway', sans-serif;
+    font-size: 20px;
+    margin-top: 20px;
+    padding: 50px 7px;
 }
 
 .testimonial-section-heading p {
@@ -657,6 +682,7 @@ img {
 .testimonial-slides .owl-nav {
     margin: auto;
     width: 60px;
+    text-shadow: #000 1px 0 10px;"
 }
 
 .testimonial-slides .owl-nav div.owl-next {

@@ -16,6 +16,7 @@
 			  		<tr>
 			  		  <th>No</th>
 					  <th>Gambar</th>
+					  <th>Deskripsi</th>
 					  <th colspan="3">Action</th>
 			  		</tr>
 				  	</thead>
@@ -25,6 +26,7 @@
 				  	  <tr>
 				    	<td>{{ $no++ }}</td>
 				    	<td><img src="{{ asset('assets/img/gambar/' .$data->gambar)}}" style="max-height: 125px; max-width: 125px; margin-top: 7px;"></td>
+				    	<td>{!! $data->content !!}</td>
 						<td>
 							<a class="btn btn-warning" href="{{ route('galeri.edit',$data->id) }}">Edit</a>
 						</td>
@@ -42,6 +44,7 @@
 				      @endforeach	
 				  	</tbody>
 				  </table>
+				  {{ $galeris->links() }}
 				</div>
 			  </div>
 			</div>	

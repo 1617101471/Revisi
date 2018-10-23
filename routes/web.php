@@ -33,3 +33,4 @@ Route::get('/beranda','FrontendController@beranda')->name('beranda');
 Route::get('/artikel','FrontendController@artikel')->name('artikel');
 Route::get('/testimoni','FrontendController@testimoni')->name('testimoni');
 Route::get('/kontak','FrontendController@kontak')->name('kontak');
+Route::get('/artikel/single/{artikel}','FrontendController@single')->name('single');
