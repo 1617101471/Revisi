@@ -7,7 +7,7 @@
 <body>
 
     <div class="container">
-    <img src="assets/img/logokripcok.png">
+    <img src="assets/img/logo.png">
     <center>
       <p style="color: #fff;">Welcome to the admin login page</p>
     </center><br>

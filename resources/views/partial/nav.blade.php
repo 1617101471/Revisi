@@ -12,7 +12,7 @@
                     <div class="col-md-9">
                         <div class="main-menu">
                             <ul id="navigation">
-                                <li><a data-scroll href="{{route('beranda')}}">HOME</a></li>
+                                <li><a data-scroll href="/">HOME</a></li>
                                 <li><a data-scroll href="{{route('produk')}}">PRODUK</a></li>
                                 <li><a data-scroll href="{{route('galeri')}}">GALERI</a></li>
                                 <!-- <li><a data-scroll href="#our-team">TEAM</a></li> -->

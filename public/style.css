@@ -240,7 +240,7 @@ img {
 }
 .logo img {
     -webkit-transition: all 0.4s ease 0s;
-    max-height: 155px;
+    max-height: 100px;
     transition: all 0.4s ease 0s;
 }
 .logo a {

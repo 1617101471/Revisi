@@ -5,9 +5,6 @@
         <div class="container">
             <div class="row">
                <div class="about-us-section">
-                @php
-                $artikels = App\Artikel::paginate(1)
-                @endphp
                 @foreach($artikels as $data)
                     <div class="col-md-6">
                         <h1><span>Cemilan</span> Kripcok</h1>
@@ -45,9 +42,6 @@
     <!-- Welcome Area End -->
     
     <!-- Choose Our Chips Area Start -->
-    @php
-    $produks = App\Produk::paginate(4)
-    @endphp
     <div scroll-spy="true" id="our-products" class="chipsofic-content-block section-gray">
         <div class="container">
           <div class="row">
@@ -83,9 +77,6 @@
     <!-- Our Process Area End -->
         
     <!-- Gallery Area Start -->
-    @php
-    $galeris = App\Galeri::paginate(8)
-    @endphp
     <div scroll-spy="true" id="pic-gallery" class="chipsofic-content-block gallery-block">
         <div class="container">
               <div class="row">
@@ -112,16 +103,16 @@
     <!-- Gallery Area End -->
     
     <!-- Our Progress Area Start -->
-    <div scroll-spy="true" class="chipsofic-content-block counter-block">
+    <div scroll-spy="true" class="chipsofic-content-block newsletter-block">
         <div class="container">
            <div class="row">
-                <div class="col-md-12">
-                   <div class="section-title text-right">
-                        <h1>Kemajuan kita</h1>
-                        <div class="chipsofic-subtitle">periksa kemajuan kami selama ini</div>
-                   </div>
-               </div>
-            </div>
+                <div class="col-md-6">
+                   <div class="section-title">
+                        <h2>Makanlah Kripcok</h2>
+                        <h3><p style="font-family: Typewriter; color: #fff;">Karena Keripik ini bisa bikin kamu sehat dan rasanya juga manis,Kaya Kamuu... iya kamuu...</p></h3>
+                    </div>
+                </div>
+           </div>
         </div>
     </div>
     <!-- Our Progress Area End -->
@@ -196,9 +187,7 @@
     <!-- Meet Our Team Area End --> 
     
     <!-- Testimonials Area Start -->
-    @php
-    $testimonis = App\Testimoni::all();
-    @endphp
+
     <div scroll-spy="true" id="customer-feedback" class="testimonial-slider-wrapper testimonial-bg-1">
         <div class="container">
            <div class="row">
@@ -238,9 +227,7 @@
     <!-- Testimonials Area End -->
     
     <!-- Blog Preview Area Start -->
-    @php
-    $artikels = App\Artikel::paginate(3)
-    @endphp
+
     <div scroll-spy="true" id="our-blog" class="chipsofic-content-block section-gray">
         <div class="container">
            <div class="row">
@@ -253,7 +240,7 @@
             </div>
             
             <div class="row wow fadeInLeft">
-              @foreach($artikels as $data)
+              @foreach($artikel as $data)
                 <div class="col-sm-4">
                     <a data-toggle="modal" data-target="#blog-content{{$data->id}}" class="single-blog-item">
                         <div class="blog-preview blog-bg-1" style="background-image: url(assets/img/gambar/{{$data->gambar}})"></div>
@@ -278,24 +265,31 @@
       <!-- Blog Single Area Start -->
 
     <!-- Newsletter Area Start -->
-    <div scroll-spy="true" class="chipsofic-content-block newsletter-block">
+    <div scroll-spy="true" class="chipsofic-content-block counter-block">
         <div class="container">
            <div class="row">
-                <div class="col-md-6">
-                   <div class="section-title">
-                        <h2>Makanlah Kripcok</h2>
-                        <h3><p style="font-family: Typewriter; color: #fff;">Karena Keripik ini bisa bikin kamu sehat dan rasanya juga manis,Kaya Kamuu... iya kamuu...</p></h3>
+                <div class="col-md-12">
+                   <div class="section-title text-center">
+                        <h1>Instagram</h1>
+                   </div>
+                   <div class="row wow fadeInLeft">
+                      @for($i=0; $i < 3; $i++)
+                        <div class="col-sm-4">
+                            <a href="{{ $results[$i]->link }}" target="_blank" class="single-blog-item">
+                                <!-- <div class="blog-preview blog-bg-1" style="background-image: url(assets/img/gambar/{{$data->gambar}})"></div> -->
+                                <img src="{{ $results[$i]->images->standard_resolution->url }}" width="768" height="300" data-full-width="2016" data-full-height="1344">
+                           </a>
+                        </div>
+                        @endfor
                     </div>
-                </div>
-           </div>
+               </div>
+            </div>
         </div>
     </div>
     <!-- Newsletter Area End -->
     
     <!-- Contact Area Start -->
-    @php
-    $kontaks = App\Kontak::paginate(1)
-    @endphp
+
       <div scroll-spy="true" id="contact-us" class="chipsofic-content-block">
         <div class="container">
           <div class="row">
@@ -327,6 +321,9 @@
             </div>
         </div> 
     </div>
+
+
+    
     <!-- Contact Area End -->
     <!--Start of Tawk.to Script-->
 <script type="text/javascript">

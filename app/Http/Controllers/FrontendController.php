@@ -9,19 +9,22 @@ use App\Produk;
 use App\Galeri;
 use App\Testimoni;
 use App\Kontak;
+use Vinkla\Instagram\Instagram;
 
 class FrontendController extends Controller
-{
-	public function beranda(){
-		$produks = Produk::paginate(4);
-		$artikels = Artikel::paginate(1);
+{   
+    public function index(){
+        $produks = Produk::paginate(4);
+        $artikels = Artikel::paginate(1);
         $artikel = Artikel::paginate(3);
-		$galeris = Galeri::paginate(8);
-		$users = User::all();
+        $galeris = Galeri::paginate(8);
         $testimonis = Testimoni::all();
         $kontaks = Kontak::all();
-		return view('index', compact('kontaks','testimonis','produks','artikels','artikel','galeris','users'));
-	}
+        $instagram = new Instagram('2050522632.4add333.99d255ad38e14a93b0711febe97f9425');
+        $results = $instagram->media();
+        return view('index',compact('kontaks','testimonis','produks','artikels','artikel','galeris','results'));
+    }
+
     public function produk(){
     	$produks = Produk::all();
     	return view('frontend.produk', compact('produks'));
@@ -52,5 +55,6 @@ class FrontendController extends Controller
         $kontaks = Kontak::all();
         return view('frontend.kontak', compact('kontaks'));
     }
+
 
 }

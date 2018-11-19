@@ -11,9 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-});
+Route::get('/','FrontendController@index');
 
 Auth::routes();
 
@@ -29,7 +27,6 @@ Route::group(['prefix'=>'admin', 'middleware'=>['auth']], function () {
 
 Route::get('/produk','FrontendController@produk')->name('produk');
 Route::get('/galeri','FrontendController@galeri')->name('galeri');
-Route::get('/beranda','FrontendController@beranda')->name('beranda');
 Route::get('/artikel','FrontendController@artikel')->name('artikel');
 Route::get('/testimoni','FrontendController@testimoni')->name('testimoni');
 Route::get('/kontak','FrontendController@kontak')->name('kontak');
